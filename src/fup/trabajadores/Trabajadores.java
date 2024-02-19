@@ -60,12 +60,17 @@ public class Trabajadores {
 
     void buscarcedula() {
         int datoEncontrado=0;
+        int bandera=0;
         System.out.println("Digite el numero de cedula a buscar");
+        datoEncontrado=in.nextInt();
         for (int i = 0; i < cedula.length; i++) {
             if(datoEncontrado==cedula[i]){
-            System.out.println("El numero de cedula esta regitsrado");
+            System.out.println("La cedula "+datoEncontrado+" ya esta regitrada");
+            bandera=1;
             }
         }
+        if(bandera==0)
+            System.out.println("la cedula "+datoEncontrado+" no esta registrada");
         
 
     }
